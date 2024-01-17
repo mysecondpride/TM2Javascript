@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let apel = 10_000;
+      let stockApel = 10;
+      let anggur = 15_000;
+      let stockAnggur = 12;
+      let pisang = 20_000;
+      let stockPisang = 5;
+
+
+      let qtyAnggur = prompt(
+        `Harga anggur per kg ${anggur}, jika permintaan anda lebih dari stok yang ada, maka kita bisa memenuhi batas stok kami
+        dengan re-input quantity pesanan
+        stock anggur kami ada ${stockAnggur}`
+      );
+      if (qtyAnggur > stockAnggur) {qtyAnggur=stockAnggur
+        prompt(`pembelian anda melebihi stock available, mohon input kembali stock anggur ${stockAnggur}`)
+        }
+
+        let qtyApel = prompt(
+          `Harga apel per kg ${apel}, jika permintaan anda lebih dari stok yang ada, maka kami bisa memenuhi batas stok kami
+        dengan re-input quantity pesanan
+        stock apel kami ada ${stockApel}`
+      );
+      if (qtyApel > stockApel) {qtyApel=stockApel
+        prompt(`pembelian anda melebihi stock available, mohon input kembali, stok apel ${stockApel}`)
+        }
+
+        let qtyPisang = prompt(
+          `Harga pisang per kg ${pisang}, jika permintaan anda lebih dari stok yang ada, maka kami bisa memenuhi batas stok kami
+        dengan re-input quantity pesanan
+        stock pisang kami ada ${stockPisang}`
+      );
+      if (qtyPisang > stockPisang) {qtyPisang=stockPisang
+        prompt(`pembelian anda melebihi stock available, mohon input kembali, stockPisang ${stockPisang}`)
+        }
+
+        //hargatotal pembelian
+        let hargaTotalPembelian = qtyAnggur*anggur + qtyApel*apel+qtyPisang*pisang
+
+
+        //input pembayaran
+        let inputTagihan =prompt(`input jumlah uang untuk pembayaran, dan 
+        ${hargaTotalPembelian}`)
+
+        if(inputTagihan > hargaTotalPembelian){
+          alert(`pembayaran anda kembali ${inputTagihan- hargaTotalPembelian}`)
+        } else if  (inputTagihan < hargaTotalPembelian){
+          prompt(`pembayaran anda kurang ${hargaTotalPembelian-inputTagihan} harap input kembali`)
+        } else if(inputTagihan=hargaTotalPembelian){
+          `pembayaran anda sudah pas`
+        }
+
+        
+
+
+
+
+        
+
+
+        
+
+     
+        
+      // let totalBelanja = qtyApel1*apel + qtyAnggur1*anggur + qtyPisang1*pisang
+      // let inputTotalBelanja = prompt(`silahkan input nominal pembayaran perbelanjaan anda,
+      //   info total belanja anda adalah:
+      //   ${qtyApel1*apel + qtyAnggur1*anggur + qtyPisang1*pisang}`)
+      //   if (inputTotalBelanja<totalBelanja ) {alert(
+      //     `pembayaran anda kurang ${totalBelanja-inputTotalBelanja}`)
+      //   }
+
+
+      
+      
+      </script>
+
+      </body>
+
+</html>
